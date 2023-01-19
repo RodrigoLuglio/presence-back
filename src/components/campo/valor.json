@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_campo_valors",
+  "info": {
+    "displayName": "Valor"
+  },
+  "options": {},
+  "attributes": {
+    "valor": {
+      "type": "decimal"
+    }
+  }
+}

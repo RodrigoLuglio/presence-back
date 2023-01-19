@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "indicadors",
+  "info": {
+    "singularName": "indicador",
+    "pluralName": "indicadors",
+    "displayName": "Indicador",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "conteudo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::conteudo.conteudo"
+    },
+    "status": {
+      "type": "string"
+    },
+    "tema": {
+      "type": "string"
+    },
+    "relatorio": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::relatorio.relatorio",
+      "inversedBy": "indicadores"
+    },
+    "respostas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::resposta.resposta",
+      "mappedBy": "indicador"
+    }
+  }
+}

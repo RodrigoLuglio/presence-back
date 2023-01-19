@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "secoes",
+  "info": {
+    "singularName": "secao",
+    "pluralName": "secoes",
+    "displayName": "Seção",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "conteudos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::conteudo.conteudo",
+      "mappedBy": "secao"
+    },
+    "numero": {
+      "type": "string"
+    },
+    "padrao": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::padrao.padrao",
+      "inversedBy": "secoes"
+    }
+  }
+}

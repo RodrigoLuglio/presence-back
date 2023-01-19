@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "padroes",
+  "info": {
+    "singularName": "padrao",
+    "pluralName": "padroes",
+    "displayName": "Padrão",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "secoes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::secao.secao",
+      "mappedBy": "padrao"
+    },
+    "numero": {
+      "type": "string"
+    },
+    "norma": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::norma.norma",
+      "inversedBy": "padroes"
+    }
+  }
+}

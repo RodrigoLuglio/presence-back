@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "relatorios",
+  "info": {
+    "singularName": "relatorio",
+    "pluralName": "relatorios",
+    "displayName": "Relatório",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "organizacao": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::organizacao.organizacao",
+      "inversedBy": "relatorios"
+    },
+    "indicadores": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::indicador.indicador",
+      "mappedBy": "relatorio"
+    },
+    "norma": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::norma.norma"
+    },
+    "ano": {
+      "type": "string"
+    }
+  }
+}

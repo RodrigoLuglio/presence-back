@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "respostas",
+  "info": {
+    "singularName": "resposta",
+    "pluralName": "respostas",
+    "displayName": "Resposta",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "texto": {
+      "type": "string"
+    },
+    "concluido": {
+      "type": "boolean"
+    },
+    "revisado": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "aprovado",
+        "finalizado",
+        "incompleto",
+        "seminfo"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "campo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::campo.campo"
+    },
+    "resposta": {
+      "type": "text"
+    },
+    "tabela": {
+      "type": "json"
+    },
+    "indicador": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::indicador.indicador",
+      "inversedBy": "respostas"
+    }
+  }
+}

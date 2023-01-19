@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizacoes",
+  "info": {
+    "singularName": "organizacao",
+    "pluralName": "organizacoes",
+    "displayName": "Organização",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "estrutura": {
+      "type": "text"
+    },
+    "local": {
+      "type": "string"
+    },
+    "operacao": {
+      "type": "string"
+    },
+    "concluido": {
+      "type": "boolean"
+    },
+    "revisado": {
+      "type": "boolean"
+    },
+    "quadro": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::quadro.quadro"
+    },
+    "departamentos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::departamento.departamento",
+      "mappedBy": "organizacao"
+    },
+    "relatorios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::relatorio.relatorio",
+      "mappedBy": "organizacao"
+    },
+    "temas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tema.tema",
+      "mappedBy": "organizacao"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "organizacao"
+    }
+  }
+}

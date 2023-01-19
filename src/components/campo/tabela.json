@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_campo_tabelas",
+  "info": {
+    "displayName": "Tabela"
+  },
+  "options": {},
+  "attributes": {
+    "tabela": {
+      "type": "json"
+    }
+  }
+}

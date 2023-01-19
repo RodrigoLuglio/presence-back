@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campos",
+  "info": {
+    "singularName": "campo",
+    "pluralName": "campos",
+    "displayName": "Campo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "texto": {
+      "type": "string"
+    },
+    "numero": {
+      "type": "string"
+    },
+    "conteudo": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::conteudo.conteudo",
+      "inversedBy": "campos"
+    },
+    "tipo": {
+      "type": "enumeration",
+      "enum": [
+        "nenhum",
+        "texto",
+        "numero",
+        "tabela",
+        "boolean",
+        "file",
+        "checkbox"
+      ]
+    },
+    "config": {
+      "type": "json"
+    },
+    "explicacao": {
+      "type": "richtext"
+    }
+  }
+}

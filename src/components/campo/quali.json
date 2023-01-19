@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_campo_qualis",
+  "info": {
+    "displayName": "quali"
+  },
+  "options": {},
+  "attributes": {
+    "quali": {
+      "type": "richtext"
+    }
+  }
+}

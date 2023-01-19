@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "regioes",
+  "info": {
+    "singularName": "regiao",
+    "pluralName": "regioes",
+    "displayName": "Região",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "regiao": {
+      "type": "string"
+    },
+    "feminino": {
+      "type": "integer"
+    },
+    "masculino": {
+      "type": "integer"
+    },
+    "outro": {
+      "type": "integer"
+    },
+    "ni": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    },
+    "tipo": {
+      "type": "enumeration",
+      "enum": [
+        "permanentes",
+        "temporarios",
+        "sgarantia",
+        "integral",
+        "parcial"
+      ]
+    }
+  }
+}

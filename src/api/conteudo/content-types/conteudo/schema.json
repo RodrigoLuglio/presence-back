@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conteudos",
+  "info": {
+    "singularName": "conteudo",
+    "pluralName": "conteudos",
+    "displayName": "Conteúdo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero": {
+      "type": "string"
+    },
+    "nome": {
+      "type": "string"
+    },
+    "campos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::campo.campo",
+      "mappedBy": "conteudo"
+    },
+    "secao": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::secao.secao",
+      "inversedBy": "conteudos"
+    },
+    "assunto": {
+      "type": "string"
+    },
+    "pilar": {
+      "type": "string"
+    },
+    "tema": {
+      "type": "string"
+    },
+    "descricao": {
+      "type": "richtext"
+    }
+  }
+}

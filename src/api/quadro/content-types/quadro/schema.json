@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quadros",
+  "info": {
+    "singularName": "quadro",
+    "pluralName": "quadros",
+    "displayName": "Quadro",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "concluido": {
+      "type": "boolean"
+    },
+    "revisado": {
+      "type": "boolean"
+    },
+    "regioes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::regiao.regiao"
+    },
+    "tabela": {
+      "type": "json"
+    }
+  }
+}
